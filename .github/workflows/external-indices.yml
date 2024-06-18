@@ -6,10 +6,9 @@ on:
   push:
     branches:
       - main
-  release:
-    types:
-      - published
-
+    tags:
+      - '*'
+      
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
