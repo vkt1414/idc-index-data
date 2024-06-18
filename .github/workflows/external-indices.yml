@@ -56,3 +56,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "*.parquet"
+          allowUpdates: true
+          omitBodyDuringUpdate: true
