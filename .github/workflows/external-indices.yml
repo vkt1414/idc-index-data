@@ -1,4 +1,4 @@
-name: CD-external
+name: CD-external-indices
 
 on:
   workflow_dispatch:
@@ -7,8 +7,8 @@ on:
     branches:
       - main
     tags:
-      - '*'
-      
+      - "*"
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -18,7 +18,7 @@ env:
 
 jobs:
   dist:
-    name: External Indices
+    name: CD-external-indices
     runs-on: ubuntu-latest
 
     steps:
